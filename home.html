@@ -1,0 +1,347 @@
+﻿<head>
+<title>Chen Wei's Works</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="jquery.min.js"></script>
+<link type="text/css" rel="stylesheet" href="style.css">
+<script>
+$(document).ready(function(){
+	$('.inner').click( function() {
+		if ($(window).width() < 1025) { /* 用 mobile 直接跳頁面 */
+			var show = $(this).data('card');
+			$(location).attr('href', 'https://hiwei.github.io/wei/'+ show +'.html');
+		} else {
+			var show = $(this).data('card');
+			$('.ext-' + show).fadeIn(500);
+			$('.white').fadeIn(500);
+			$('body').css('overflow-y','hidden');
+		}
+	});
+
+	$('.close, .white').click( function() {
+		$('.ext').fadeOut(500);
+		$('.white').fadeOut(500);
+		setTimeout(function(){
+			$('body').css('overflow-y','auto');
+		}, 500);
+	});
+	$('.hamburger').click( function() {
+		$('.hamburger :nth-child(n)').toggleClass('clicked');
+		$('.list').fadeToggle(500);
+	});
+	$('.list :nth-child(n)').click( function() {
+		var category_num = $(this).data('category');
+		$('html, body').animate({ scrollTop: $( '#category' + category_num ).offset().top }, 800);
+		$('.hamburger :nth-child(n)').toggleClass('clicked');
+		$('.list').fadeToggle(500);
+	});
+})
+</script>
+</head>
+<body>
+<div class="hamburger">
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+
+<div class="list">
+	<p data-category="1">Home</p>
+	<p data-category="2">Web Design</p>
+	<p data-category="3">UI Design</p>
+	<p data-category="4">Project</p>
+	<p data-category="5">Others</p>
+</div>
+
+<div class="home" id="category1">
+	<section>My Works.</section>
+</div>
+
+<!-- WEB DESIGN -->
+<div class="parallax parallax1" id="category2"></div>
+<!-- CARD -->
+<div class="outer">
+<div class="title_640">WEB DESIGN</div>
+	<!-- A -->
+	<div class="inner" data-card="10">
+		<figure>
+			<img src="img/demo/yading/all_thumb_yading.jpg">
+		</figure>
+		<div class="caption">
+			<p>稻城亞丁</p>
+		</div>
+	</div>
+	<!-- A -->
+	<div class="inner" data-card="15">
+		<figure>
+			<img src="img/demo/yunnan/all_thumb_yunnan.jpg">
+		</figure>
+		<div class="caption">
+			<p>Wander in Yunnan</p>
+		</div>
+	</div>
+	<!-- A -->
+	<div class="inner" data-card="11">
+		<figure>
+			<img src="img/demo/shape/all_thumb_shape.jpg">
+		</figure>
+		<div class="caption">
+			<p>SHAPE Magazine</p>
+		</div>
+	</div>
+	<!-- A -->
+	<div class="inner" data-card="12">
+		<figure>
+			<img src="img/demo/6spots/all_thumb_6spots.jpg">
+		</figure>
+		<div class="caption">
+			<p>6 Spots</p>
+		</div>
+	</div>
+	<!-- A -->
+	<div class="inner" data-card="13">
+		<figure>
+			<img src="img/demo/tibet/all_thumb_tibet.jpg">
+		</figure>
+		<div class="caption">
+			<p>Independence of Tibet</p>
+		</div>
+	</div>
+	<!-- A -->
+	<div class="inner" data-card="14">
+		<figure>
+			<img src="img/demo/view/all_thumb_view.jpg">
+		</figure>
+		<div class="caption">
+			<p>Views With Color</p>
+		</div>
+	</div>
+</div>
+
+<!-- PROJECT 2 -->
+<div class="parallax parallax2" id="category3"></div>
+<div class="outer">
+<div class="title_640">UI DESIGN</div>
+	<!-- A -->
+	<div class="inner" data-card="21">
+		<figure>
+			<img src="img/ui/air/01.jpg">
+		</figure>
+		<div class="caption">
+			<p>廉價航空</p>
+		</div>
+	</div>
+</div>
+
+<!-- PROJECT 3 -->
+<div class="parallax parallax3" id="category4"></div>
+<div class="outer">
+<div class="title_640">PROJECT</div>
+	<!-- A -->
+	<div class="inner" data-card="1">
+		<figure>
+			<img src="img/project01.png">
+		</figure>
+		<div class="caption">
+			<p>畢業專題</p>
+		</div>
+	</div>
+	<!-- A -->
+	<div class="inner" data-card="2">
+		<figure>
+			<img src="img/project02.png">
+		</figure>
+		<div class="caption">
+			<p>產業合作</p>
+		</div>
+	</div>
+	<!-- A -->
+	<div class="inner" data-card="3">
+		<figure>
+			<img src="img/project03.png">
+		</figure>
+		<div class="caption">
+			<p>人社中心合作</p>
+		</div>
+	</div>	
+</div>
+
+<!-- PROJECT 4 -->
+<div class="parallax parallax4" id="category5"></div>
+<div class="outer">
+<div class="title_640">OTHERS</div>
+	<!-- A -->
+	<div class="inner" data-card="17">
+		<figure>
+			<img src="img/other_ui.png">
+		</figure>
+		<div class="caption">
+			<p>UI</p>
+		</div>
+	</div>
+	<!-- A -->
+	<div class="inner" data-card="16">
+		<figure>
+			<img src="img/other_design.png">
+		</figure>
+		<div class="caption">
+			<p>Design</p>
+		</div>
+	</div>
+	<!-- A -->
+	<div class="inner" data-card="18">
+		<figure>
+			<img src="img/other_redesign.png">
+		</figure>
+		<div class="caption">
+			<p>Redesign</p>
+		</div>
+	</div>
+	<!-- A -->
+	<div class="inner" data-card="19">
+		<figure>
+			<img src="img/other_illustrations.png">
+		</figure>
+		<div class="caption">
+			<p>Illustrations</p>
+		</div>
+	</div>
+	<!-- A -->
+	<div class="inner" data-card="20">
+		<figure>
+			<img src="img/other_videos.png">
+		</figure>
+		<div class="caption">
+			<p>Videos</p>
+		</div>
+	</div>
+</div>
+
+
+<!-- EXTERNAL WEBSITE -->
+<div class="ext ext-10">
+	<div class="project_name">稻城亞丁</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="10.html" scrolling="yes">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-15">
+	<div class="project_name">Wander in Yunnan</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="15.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-11">
+	<div class="project_name">SHAPE Magazine</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="11.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-12">
+	<div class="project_name">6 Spots</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="12.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-13">
+	<div class="project_name">Independence of Tibet</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="13.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-14">
+	<div class="project_name">Views with color</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="14.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-1">
+	<div class="project_name">畢業專題</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="1.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-2">
+	<div class="project_name">產業合作</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="2.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-3">
+	<div class="project_name">人社中心合作</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="3.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-21">
+	<div class="project_name">廉價航空</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="21.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-17">
+	<div class="project_name">UI</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="17.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-16">
+	<div class="project_name">Design</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="16.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-18">
+	<div class="project_name">Redesign</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="18.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-19">
+	<div class="project_name">Illustrations</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="19.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+<div class="ext ext-20">
+	<div class="project_name">Videos</div>
+	<div class="close">╳</div>
+	<object type="text/html" data="20.html">
+		<p>Oops! Please try again.</p>
+	</object>
+</div>
+
+<!-- IMAGE 
+<div class="ext ext_img ext-10">
+	<div class="project_name">01111111111</div>
+	<div class="close">╳</div>
+	<div class="img_block">
+		<img src="img/ui/ui01.png" />
+	</div>
+</div>
+<div class="ext ext_img ext-321">
+	<div class="project_name">01111111111</div>
+	<div class="close">╳</div>
+	<div class="img_block">
+		<img src="img/02.jpg" />
+	</div>
+</div>
+-->
+<!-- block when show web -->
+
+<div class="white"></div>
+</body>
+</html>
