@@ -7,6 +7,9 @@ body {
 	width: 100%;
 	font-family: noto sans tc;
 }
+.overflow_hid {
+	overflow-y: hidden;
+}
 .home {
 	height: 50vh; 
 	text-align: center;
@@ -395,13 +398,13 @@ object {
 		color: #143C23;
 	}
 	.outer {
-		width: 76vw;
+		width: 84vw;
 	}
 	.inner {
-		width: 34vw;
-		height: 34vw;
+		width: 38vw;
+		height: 38vw;
 		margin: 2vw;
-		margin-bottom: 20%;
+		margin-bottom: 25%;
 	}
 	.hamburger {
 		top: 6vw;
