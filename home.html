@@ -29,6 +29,7 @@ $(document).ready(function(){
 		$('.list').fadeToggle(500);
 		if ($(window).width() < 1025) {
 			$('.white_list').fadeToggle(500);
+			$('body, html').toggleClass('overflow_hid');
 		}
 	});
 	$('.list :nth-child(n)').click( function() {
@@ -38,6 +39,7 @@ $(document).ready(function(){
 		$('.list').fadeToggle(500);
 		if ($(window).width() < 1025) {
 			$('.white_list').fadeToggle(500);
+			$('body, html').toggleClass('overflow_hid');
 		}
 	});
 })
