@@ -86,7 +86,7 @@ body {
 	transform: rotate(-45deg);
 }
 .list {
-	z-index: 99;
+	z-index: 90;
 	position: absolute;	
 	position: fixed;
 	top: 10vw;
@@ -118,7 +118,7 @@ body {
 	align-items: stretch;
 	transition: opacity .5s;
 }
-.white {
+.white, .white_list {
 	z-index: 98;
 	display: none;
 	position: absolute;
@@ -129,6 +129,9 @@ body {
 	height: 100%;
 	opacity: .9;
 	background: #fff;
+}
+.white_list {
+	z-index: 80;
 }
 /* 卡片 */
 .inner {
@@ -382,6 +385,7 @@ object {
 	}
 	.caption {
 		font-size: 12pt;
+		top: -10%;
 	}
 	.list p {
 		font-size: 16pt;
@@ -397,7 +401,7 @@ object {
 		width: 34vw;
 		height: 34vw;
 		margin: 2vw;
-		margin-bottom: 15%;
+		margin-bottom: 20%;
 	}
 	.hamburger {
 		top: 6vw;
